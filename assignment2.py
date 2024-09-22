@@ -21,7 +21,7 @@ def processData(file_content):
             person_id = int(parts[0].strip())
             name = parts[1].strip()
             birthday_str = parts[2].strip()
-            birthday = datetime.strptime(birthday_str, '%d/%m/%Y')
+            birthday = datetime.datetime.strptime(birthday_str, '%d/%m/%Y')
             data_dict[person_id] = (name, birthday)
 
         except (ValueError, IndexError):
